@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Trekking</title>
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css')}}">
+</head>
+<body class="bg-nav">
+  <nav>
+    <div class="main">
+      <h1>Welcome to my website</h1>
+      <h2>Explore the world of adventure with us!!</h2>
+      <p>Whether you're seeking thrilling trekking experiences<br>or tranquil getaways, we have something for everyone.</p>
+      <button class="btn btn-custom" onclick="location.href='/login'">Join Us</button>
+    </div>
+  </nav>
+
+  <section class="container mt-5 section">
+    <div class="row">
+      <div class="col-md-6">
+        <img src="https://t3.ftcdn.net/jpg/01/96/01/82/360_F_196018299_moUD9nFRL1OWaVTUG7YgsdCk3gCQVzj7.jpg" class="img">
+      </div>
+      <div class="col-md-6">
+        <div class="about-section">
+          <h2>About Us</h2>
+          <p>Welcome to our adventure-packed world! At our core, we are passionate about creating memorable experiences in nature. Whether it's trekking through rugged terrains or unwinding in serene landscapes, we offer diverse opportunities for adventure seekers of all levels. Join us and embark on your next thrilling journey!</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="container mt-5 section">
+    <div class="row">
+      <div class="col-md-6">
+        <img src="https://t3.ftcdn.net/jpg/04/22/75/56/360_F_422755665_8DsKpMrDD32om7T6dGdmhq3tAIeH3XI1.jpg" class="img">
+      </div>
+      <div class="col-md-6">
+        <div class="about-section">
+          <h2>Our Services</h2>
+          <p>Welcome to our adventure-packed world! At our core, we are passionate about creating memorable experiences in nature. Whether it's trekking through rugged terrains or unwinding in serene landscapes, we offer diverse opportunities for adventure seekers of all levels. Join us and embark on your next thrilling journey!</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const sections = document.querySelectorAll('.section');
+
+      const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('show');
+          } else {
+            entry.target.classList.remove('show');
+          }
+        });
+      }, { threshold: 0 });
+
+      sections.forEach(section => {
+        observer.observe(section);
+      });
+    });
+  </script>
+</body>
+</html>

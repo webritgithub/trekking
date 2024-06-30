@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/login.css')}}">
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="form-wrapper sign-in">
+        <form action="">
+          <h2>Sign Up</h2>
+          <div class="input-group">
+            <input type="text" required>
+            <label for="">Name</label>
+          </div>
+          <div class="input-group">
+            <input type="text" required>
+            <label for="">Email</label>
+          </div>
+          <div class="input-group">
+            <input type="password" required>
+            <label for="">Password</label>
+          </div>
+          <div class="remember">
+            <label for=""><input type="checkbox">I agree to the terms & conditions</input>
+            </label>
+          </div>
+          <button type="submit">Sign Up</button>
+          <div class="signUp-link">
+            <p>Already have an account?<a href="/login">Sign In</a></p>
+          </div>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>
